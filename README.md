@@ -1,36 +1,138 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Bookmark Manager
 
-## Getting Started
+## Live Demo
 
-First, run the development server:
+[https://smart-bookmark-xi-three.vercel.app]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+##  GitHub Repository
+
+[https://github.com/Rasika-Mahabare/smart-bookmark]
+
+---
+
+## About The Project
+
+Smart Bookmark Manager is a full‑stack web application that allows users to securely save, manage, and access personal bookmarks from anywhere.
+
+Users authenticate using Google OAuth, and their bookmarks are stored in a cloud database. Each user can only see and manage their own bookmarks using secure Row Level Security (RLS).
+
+This project demonstrates authentication, database integration, CRUD operations, protected routes, and production deployment.
+
+---
+
+## 🚀 Features
+
+* Google Authentication (Supabase Auth)
+* Add bookmarks (Title + URL)
+* Delete bookmarks
+* Persistent cloud storage
+* User‑specific private data
+* Realtime updates
+* Clean responsive UI using Tailwind CSS
+* Deployed on Vercel
+
+---
+
+##  Tech Stack
+
+### Frontend
+
+* Next.js 16 (App Router)
+* React
+* Tailwind CSS
+
+### Backend / Database
+
+* Supabase (PostgreSQL)
+* Supabase Authentication (Google OAuth)
+* Supabase Realtime
+* Row Level Security (RLS)
+
+### Deployment
+
+* Vercel
+
+---
+
+## Screenshots
+
+public/Snapshots/bookmark.png
+public/Snapshots/dashboard.png
+public/Snapshots/login.png
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory and add:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=your_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository:
+git clone https://github.com/Rasika-Mahabare/smart-bookmark.git
 
-## Learn More
+Navigate into project folder:
+cd smart-bookmark
 
-To learn more about Next.js, take a look at the following resources:
+Install dependencies:
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Run development server:
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open in browser:
+http://localhost:3000
+---
 
-## Deploy on Vercel
+## Database Schema
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Table: `bookmarks`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Column     | Type      | Description           |
+| ---------- | --------- | --------------------- |
+| id         | uuid      | Primary Key           |
+| title      | text      | Bookmark title        |
+| url        | text      | Website link          |
+| user_id    | uuid      | Authenticated user ID |
+| created_at | timestamp | Auto generated        |
+
+---
+
+## Security
+
+* Google OAuth authentication
+* Supabase Row Level Security (RLS)
+* Users can only access their own bookmarks
+* Secure environment variables
+
+---
+
+##  What I Learned
+
+* Implementing OAuth authentication flow
+* Managing protected routes in Next.js
+* Using Supabase with Row Level Security
+* Handling CRUD operations securely
+* Deploying full‑stack apps to production
+* Environment variable management in Vercel
+
+---
+
+## Author
+
+**Rasika Mahabare**
+GitHub: [https://github.com/Rasika-Mahabare]
+LinkedIn: [https://linkedin.com/in/rasika-mahabare]
+
+---
+
+## License
+
+This project was developed for learning and assignment purposes.
