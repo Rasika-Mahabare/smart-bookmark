@@ -132,7 +132,6 @@ GitHub: [https://github.com/Rasika-Mahabare]
 LinkedIn: [https://linkedin.com/in/rasika-mahabare]
 
 ---
-
 ## License
 
 This project was developed for learning and assignment purposes.
